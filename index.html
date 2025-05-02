@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Rothko Painting</title>
+    <link href="./styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="editor">
+        <h1>Choose what to modify</h1>
+        <div id="buttons">
+            <button id="frame-btn">frame</button>
+            <button id="canvas-btn">canvas</button>
+            <button id="one-btn">one</button>
+            <button id="two-btn">two</button>
+            <button id="three-btn">three</button>
+        </div>
+        <div id="inputs">
+            <h2 id="label1"></h2><input type="number">
+            <h2 id="label2"></h2><input type="number">
+            <h2 id="label3"></h2><input type="number">
+            <h2 id="label4"></h2><input type="number">
+        </div>
+    </div>
+    <div class="frame" id="frame">
+      <div class="canvas" id="canvas">
+        <div class="one" id="one"></div>
+        <div class="two" id="two"></div>
+        <div class="three" id="three"></div>
+      </div>
+    </div>
+    <script>
+        const label1 = document.getElementById('label1');
+        const label2 = document.getElementById('label2');
+        const label3 = document.getElementById('label3');
+        const label4 = document.getElementById('label4');
+        const frameBtn = document.getElementById('frame-btn');
+        const canvasBtn = document.getElementById('canvas-btn');
+        const oneBtn = document.getElementById('one-btn');
+        const twoBtn = document.getElementById('two-btn');
+        const threeBtn = document.getElementById('three-btn');
+        const frame = document.getElementById('frame');
+        const canvas = document.getElementById('canvas');
+        const one = document.getElementById('one');
+        const two = document.getElementById('two');
+        const three = document.getElementById('three');
+
+    </script>
+  </body>
+</html>
