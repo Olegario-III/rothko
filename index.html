@@ -14,6 +14,7 @@
             <button id="one-btn">one</button>
             <button id="two-btn">two</button>
             <button id="three-btn">three</button>
+            <button id="reset-btn">Reset</button>
         </div>
         <div id="inputs">
             <h2 id="label1"></h2><input id="label1-txt" type="number">
@@ -34,15 +35,16 @@
         const label2 = document.getElementById('label2');
         const label3 = document.getElementById('label3');
         const label4 = document.getElementById('label4');
-        const label1Txt = document.getElementById('label1-txt');
-        const label2Txt = document.getElementById('label2-txt');
-        const label3Txt = document.getElementById('label3-txt');
-        const label4Txt = document.getElementById('label4-txt');
+        const label1Txt = document.getElementById('label1-txt').value;
+        const label2Txt = document.getElementById('label2-txt').value;
+        const label3Txt = document.getElementById('label3-txt').value;
+        const label4Txt = document.getElementById('label4-txt').value;
         const frameBtn = document.getElementById('frame-btn');
         const canvasBtn = document.getElementById('canvas-btn');
         const oneBtn = document.getElementById('one-btn');
         const twoBtn = document.getElementById('two-btn');
         const threeBtn = document.getElementById('three-btn');
+        const resetBtn = document.getElementById('reset-btn');
         const frame = document.getElementById('frame');
         const canvas = document.getElementById('canvas');
         const one = document.getElementById('one');
