@@ -17,10 +17,10 @@
             <button id="reset-btn">Reset</button>
         </div>
         <div id="inputs">
-            <h2 id="label1"></h2><input id="label1-txt" type="number">
-            <h2 id="label2"></h2><input id="label2-txt" type="number">
-            <h2 id="label3"></h2><input id="label3-txt" type="number">
-            <h2 id="label4"></h2><input id="label4-txt" type="number">
+            <h2 id="label1"></h2><input id="label1-txt" type="number" disabled>
+            <h2 id="label2"></h2><input id="label2-txt" type="number" disabled>
+            <h2 id="label3"></h2><input id="label3-txt" type="number" disabled>
+            <h2 id="label4"></h2><input id="label4-txt" type="number" disabled>
         </div>
     </div>
     <div class="frame" id="frame">
@@ -52,11 +52,33 @@
         const three = document.getElementById('three');
         
         const defaultFrameBorder = window.getComputedStyle(frame).borderWidth;
-        console.log(defaultFrameBorder);
+        const defaultFramePadding = window.getComputedStyle(frame).padding;
+        const defaultFrameMargin = window.getComputedStyle(frame).margin;
+        const frameBorder = defaultFrameBorder;
+        const framePadding = defaultFramePadding;
+        const frameMargin = defaultFrameMargin;
 
         const frameFunction =()=>{
-          
-        };
+              document.getElementById('label1-txt').disabled = false;
+              document.getElementById('label2-txt').disabled = false;
+              document.getElementById('label3-txt').disabled = false;
+              document.getElementById('label4-txt').hidden = true;
+              label1.textContent = "Frame Border (px)";
+              label2.textContent = "Frame Padding (px)";
+              label3.textContent = "Frame Margin (px)";
+
+              document.getElementById('label1-txt').addEventListener("input", e => {
+                frame.style.borderWidth = `${e.target.value}px`;
+              });
+              document.getElementById('label2-txt').addEventListener("input", e => {
+                frame.style.borderWidth = `${e.target.value}px`;
+              });
+              document.getElementById('label3-txt').addEventListener("input", e => {
+                frame.style.borderWidth = `${e.target.value}px`;
+              });
+
+            };
+            frameBtn.addEventListener("click", frameFunction);
     </script>
   </body>
 </html>
